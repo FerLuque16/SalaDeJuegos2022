@@ -1,0 +1,21 @@
+<div class="wrapper d-flex flex-column justify-content-center align-items-center w-auto">
+    <div class="calculos d-flex flex-column justify-content-center align-items-center">
+        <h3 class="my-1 p-1">Suma</h3>
+
+        <label  class="my-2">Edad 1</label>
+        <input type="number" [(ngModel)]="miOperacion.numero1">
+        <label >Edad 2</label>
+        <input type="number" [(ngModel)]="miOperacion.numero2">
+
+        <!-- <input type="button" (click)="mostrar()" value="Mostrar"> -->
+        <input class="mt-2" type="button" (click)="miOperacion.suma()" value="Calcular Suma">
+        <input class="mt-2" type="button" (click)="miOperacion.promedio()" value="Calcular Promedio">
+        <input class="mt-2" type="button" (click)="miOperacion.limpiar()" value="Limpiar Cuadros de Texto">
+
+        <h3 class="p-1">Suma: {{miOperacion.resultadoSuma}}</h3>
+        <h3 class="p-1">Promedio: {{miOperacion.resultadoPromedio}}</h3>
+    </div>
+
+    
+</div>
+
