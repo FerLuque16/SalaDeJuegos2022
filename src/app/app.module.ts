@@ -8,6 +8,8 @@ import { LoginComponent } from './auth/pages/login/login.component';
 import { RegistroComponent } from './auth/pages/registro/registro.component';
 import { HomeComponent } from './main/pages/home/home.component';
 import { Ejercicio1Component } from './ejercicio1/ejercicio1.component';
+import { NotFoundComponent } from './error/pages/not-found/not-found.component';
+import { BienvenidoComponent } from './main/pages/bienvenido/bienvenido.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { Ejercicio1Component } from './ejercicio1/ejercicio1.component';
     LoginComponent,
     RegistroComponent,
     HomeComponent,
-    Ejercicio1Component
+    Ejercicio1Component,
+    NotFoundComponent,
+    BienvenidoComponent
   ],
   imports: [
     BrowserModule,
