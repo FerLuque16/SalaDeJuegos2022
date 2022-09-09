@@ -1,0 +1,98 @@
+
+* {
+    box-sizing: border-box;
+    }
+    .wrapper{
+    
+    font-family: Inter ;
+    margin: 0 ;
+    background-color: #23252C;
+    color: white ;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    }
+    .App{
+    background-color: #1A1B21 ;
+    width: 317px ;
+    border-radius: 10px 10px 10px 10px ;
+    margin: 20px !important;
+    
+    }
+    .titulo{
+        margin: 10px !important;
+    }
+    
+    .info{
+    text-align: center ;
+    }
+    .info--title{
+    color: white ;
+    font-weight: 700 ;
+    font-size: 25px ;
+    }
+    .info--ocupation{
+    color: #F3BF99 ;
+    font-weight: 400 ;
+    font-size: 15px ;
+    }
+    .info--image{
+    border-radius: 10px 10px 0 0 ;
+    width: 317px ;
+    height: 317px ;
+    }
+    .button--container{
+    display: flex ;
+    justify-content: space-evenly ;
+    margin-bottom: 5px !important;
+    margin-top: 12px !important;
+    }
+    .button{
+    width: 115px ;
+    height: 34px ;
+    padding: 9px 13px 9px 11px;
+    border: none ;
+    border-radius: 6px ;
+    font-family: Inter ;
+    font-weight: 500 ;
+    font-size: 15px ;
+    cursor: pointer ;
+    }
+    .button_linkedin{
+    background-color: #5093E2 ;
+    color: white ;
+    }
+    .button_email > img{
+    margin-left: 0px !important;
+    }
+    .button img,
+    .button i::before{
+    padding-right: 10px !important;
+    }
+    .about{
+    margin: 18px 35px !important ;
+    }
+    .about--text{
+    font-weight: 400 ;
+    font-size: 12px ;
+    }
+    .interests{
+    margin: 24px 35px !important;
+    }
+    .interests--text{
+    font-weight: 400 ;
+    font-size: 12px ;
+    }
+    .footer{
+    background-color: #161619 ;
+    padding: 20px 73px !important;
+    border-radius: 0px 0px 10px 10px !important;
+    }
+    .icon--container{
+    display: flex ;
+    justify-content: space-around ;
+    align-items: center ;
+    }
+    .icon--item{
+    cursor: pointer ;
+    }
