@@ -1,9 +1,11 @@
 <div class="d-flex justify-content-center align-items-center flex-column vh-100 bg-dark position-relative">
     <h1 class="p-1 text-center text-white">Menu Principal</h1>
-    <a class="btn btn-success mt-4" routerLink="/login">Iniciar Sesion</a>
-    <a class="btn btn-warning mt-4" routerLink="/registro">Registrarse</a>
+    <a *ngIf="displayLogIn" class="btn btn-success mt-4" routerLink="/login">Iniciar Sesion</a>
+    <a *ngIf="displayRegister" class="btn btn-warning mt-4" routerLink="/registro">Registrarse</a>
     <a class="btn btn-primary mt-4" routerLink="/juegos">Ir al menu de juegos</a>
     <a class="btn btn-secondary mt-4" routerLink="/chat">Ir al chat</a>
+    <button *ngIf="displayLogout" class="btn btn-warning" (click)="logOut()">Logout</button>
+    <p class="userLogueado" *ngIf="usuario.email !== '' ">Usuario Actualmente Logueado: {{usuario.email}}</p>
    
     
 </div>
