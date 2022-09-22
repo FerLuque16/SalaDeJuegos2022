@@ -20,6 +20,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AngularFireModule } from '@angular/fire/compat';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     ToastrModule.forRoot(),
-    
+    HttpClientModule
     
     // provideAuth(() => getAuth()),
     // provideFirestore(() => getFirestore())

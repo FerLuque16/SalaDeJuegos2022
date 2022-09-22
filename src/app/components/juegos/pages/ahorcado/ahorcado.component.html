@@ -1,0 +1,67 @@
+<div class="body">
+    <div class="container">
+  
+      <div class="row">
+        <div class="text-center w-100 h-20">
+          <h2 class="titulo">AHORCADO</h2>
+        </div>
+        <div class="text-center w-100 h-20"> 
+          <h2 class="palabra"> {{palabraResultado |uppercase}} </h2>     
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="d-flex justify-content-center flex-wrap">
+      
+            <button [disabled]="cantidadIntentos == 0" class="col-sm-1 btn-warning btn boton-letra" *ngFor="let letra of letras" (click)="letraSeleccionada(letra)">
+                  {{letra |uppercase}}
+            </button>
+          
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class ="text-center"style="margin:auto;">
+            <span >
+              Te quedan: {{cantidadIntentos}} intentos.
+            </span>
+            <br>
+            <div class="col-md-12 mt-2">
+                <button class=" btn-success btn" 
+                style="height: 40px;" (click)="reiniciar()"> 
+                Empezar de nuevo 
+                </button>
+            </div>
+            <br>
+        </div>
+      </div>
+      <a class="btn btn-danger mr-3" routerLink="/juegos">Volver</a>
+    </div>
+  
+  <!-- Modal -->
+  
+    <div class="modal" [ngClass]="displayModal ? 'mostrar' : 'oculto'" >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{modalMsj1}}</h5>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;tu mama</span>
+            </button> -->
+          </div>
+          <div class="modal-body">
+            <p *ngIf="cantidadIntentos == 0">La palabra era: <strong>{{palabraElegida|titlecase}}</strong> </p>
+            <p>{{modalMsj2}}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="terminarJuego()" >Cerrar y volver al menu</button>
+            <button type="button" class="btn btn-primary" (click)="reiniciar()">Seguir jugando</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  
+  

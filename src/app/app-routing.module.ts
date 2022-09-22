@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/pages/login/login.component';
 import { RegistroComponent } from './auth/pages/registro/registro.component';
+import { ChatModule } from './chat/chat.module';
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
 import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
@@ -11,6 +12,14 @@ const routes: Routes = [
     path:'',
     redirectTo:'home',
     pathMatch:'full'
+  },
+  {
+    path:'juegos',
+    loadChildren:()=>import('./components/juegos/juegos.module').then(m => m.JuegosModule)
+  },
+  {
+    path:'chat',
+    loadChildren:()=>import('./chat/chat.module').then(m => ChatModule)
   },
   {
     path:'home',
@@ -27,6 +36,10 @@ const routes: Routes = [
   {
     path:'quiensoy',
     component:QuienSoyComponent
+  },
+  {
+    path:'errorUsuario',
+    component:ErrorComponent
   },
   {
     path:'**',

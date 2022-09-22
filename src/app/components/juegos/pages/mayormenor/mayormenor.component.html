@@ -1,0 +1,47 @@
+<div class="body">
+    <div class="container">
+
+        <div class=" d-flex justify-content-center align-items-center flex-column">
+            <div class="row mt-4">
+                <h1>Juego de Mayor o Menor</h1>
+            </div>
+            <div class="row">
+                <p>
+                    En este juego tendrás que adivinar si la siguiente carta es mayor o menor
+                </p>
+            </div>
+            <div class="row mt-2">
+                <img *ngIf="cartaAMostrar && cartaAMostrar.image && cartaAMostrar !== cartaSiguiente" [src]="cartaAMostrar.image" [alt]="cartaAMostrar.code">
+            </div>
+            <div class="row mt-4">
+                <h2 [ngClass]="mensajeResultado == 'ACERTASTE!' ? 'acierto' : 'error'" >{{mensajeResultado}}</h2>
+            </div>
+            <div class="row mt-3">
+                <button class="btn btn-warning" [disabled]="buttonDisabled" (click)="compararMenor()">Menor</button>
+                <button class="btn btn-success ml-3"  [disabled]="buttonDisabled" (click)="compararMayor()">Mayor</button>
+            </div>
+        </div>
+        
+        <a routerLink="/juegos" class="btn btn-danger mt-5">Volver</a>
+    </div>
+    
+    <!-- Modal -->
+    
+    <div class="modal" [ngClass]="displayModal ? 'mostrar' : 'oculto'" >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">{{modalMsj1}}</h5>
+            </div>
+            <div class="modal-body">
+              <p>{{modalMsj2}}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="terminarJuego()" >Cerrar, enviar resultados y volver al menu</button>
+              <button type="button" class="btn btn-primary" (click)="reiniciar()">Enviar resultado y seguir jugando</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</div>

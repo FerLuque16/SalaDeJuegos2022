@@ -89,9 +89,14 @@
             </defs>
             </svg>
     </div>
-    <div class="text">
+    <div *ngIf="url != '/errorUsuario'" class="text">
         <h1>404 Error</h1>  
       <h2>Ocurrió un errror :(</h2>
          <h3>Pagina no encontrada - dejanos llevarte a <a routerLink="/home">HOME</a></h3> 
+    </div>
+    <div *ngIf="url == '/errorUsuario'" class="text">
+        <h1>404 Error</h1>  
+      <h2>Debe estar logueado para ingresar :(</h2>
+         <h3>Acceso denegado - dejanos llevarte a <a routerLink="/home">HOME</a></h3> 
     </div>
 </body>

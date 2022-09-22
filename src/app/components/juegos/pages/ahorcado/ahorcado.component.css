@@ -1,0 +1,35 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #23252C;
+    color: white ;
+    height: 100vh;
+    overflow: hidden !important;
+}
+.modal{
+    color: black;
+}
+.titulo{
+    font-size: 4.5rem;
+}
+.palabra{
+    font-size: 4.25rem;
+    letter-spacing: 1rem;
+}
+.boton-letra{
+    width: 3rem !important;
+    margin: 0.25rem;
+}
+
+.mostrar{
+    display: block;
+}
+.oculto{
+    display: none;
+}
+/* .body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */

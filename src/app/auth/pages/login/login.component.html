@@ -2,26 +2,21 @@
     
     <main class="form-signin w-100 m-auto">
       
-        <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <img class="mb-4" src="./assets/images/usuario.png" alt="" width="125" height="125">
+        <h1 class="h3 mb-3 fw-normal">Iniciar Sesion</h1>
     
         <div class="form-floating">
           <input type="email" class="form-control" id="floatingInput" [(ngModel)]="user" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
+          <label for="floatingInput">Email </label>
         </div>
         <div class="form-floating">
           <input type="password" class="form-control" id="floatingPassword" [(ngModel)]="pass" placeholder="Password">
-          <label for="floatingPassword">Password</label>
+          <label for="floatingPassword">Contraseña</label>
         </div>
     
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="login(user,pass)">Ingresar</button>
-        <button class="w-100 btn btn-lg btn-warning" type="submit" (click)="redirigir()">Registrarme</button>
-        <button class="w-100 btn btn-lg btn-secondary" type="submit" (click)="logueoRapido()">Ingreso Rapido</button>
+        <button class="w-100 m-1 btn btn-lg btn-primary" type="submit" (click)="login(user,pass)">Ingresar</button>
+        <button class="w-100 m-1 btn btn-lg btn-warning" type="submit" (click)="redirigir()">Registrarme</button>
+        <button class="w-100 m-1 btn btn-lg btn-secondary" type="submit" (click)="logueoRapido()">Ingreso Rapido</button>
         <p class="mt-5 mb-3 text-muted">&copy; Fernando Luque - 2022</p>
       
     </main>

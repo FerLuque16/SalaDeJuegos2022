@@ -1,0 +1,46 @@
+<section class="content-item" id="comments">
+    <div class="container">   
+    	<div *ngIf="usuarioLogueado" class="row d-flex flex-column justify-content-center align-items-center">
+            <div class="col-sm-8">   
+                <form (ngSubmit)="enviarMensaje()">
+                	<h3 class="pull-left">Escribir Mensaje</h3>
+                	<button type="submit" class="btn btn-primary pull-right">Enviar</button>
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-sm-3 col-lg-2 hidden-xs">
+                            	<img class="img-thumbnail" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-9 col-lg-10">
+                                <textarea class="form-control" id="message" placeholder="Escriba aca su mensaje" required=""
+                                [(ngModel)]="nuevoMensaje" [ngModelOptions]="{standalone: true}"></textarea>
+                            </div>
+                        </div>  	
+                    </fieldset>
+                </form>
+                
+                <h3>{{mensajes.length}} Comentarios</h3>
+                
+                
+                <div *ngFor="let mensaje of mensajes" class="media">
+                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{mensaje.emisorEmail}}</h4>
+                        <p>{{mensaje.texto}}</p>
+                        <ul class="list-unstyled list-inline media-detail pull-left">
+                            <li><i class="fa fa-calendar"></i>{{mensaje.fecha | date:'dd/MM/yyyy HH:mm'}}</li>
+                    
+                        </ul>
+                       
+                    </div>
+                </div>
+                
+            
+            </div>
+        </div>
+
+        <div *ngIf="!usuarioLogueado" class="row d-flex justify-content-center align-items-center">
+            <h4 class="text-center">Usted debe estar logueado para poder visualizar el chat</h4>
+        </div>
+    </div>
+</section>
+

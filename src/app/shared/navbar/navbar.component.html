@@ -6,11 +6,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a *ngIf="!usuarioLogueado" class="nav-link active" routerLink="login">Login</a>
+        <a *ngIf="!usuarioLogueado" class="nav-link active" routerLink="login">Iniciar sesion</a>
         <a *ngIf="!usuarioLogueado" class="nav-link" routerLink="registro">Registro</a>
         <a class="nav-link" routerLink="home">Home</a>
         <a class="nav-link" routerLink="quiensoy">Quien Soy</a>
-        <a class="nav-link" routerLink="menujuegos">Menu de Juegos</a>
+        <a class="nav-link" routerLink="/juegos">Menu de Juegos</a>
         <a class="nav-link" routerLink="ejercicio">Ejercicio 1</a>
         <a *ngIf="usuarioLogueado" class="nav-link" (click)="cerrarSesion()" style="cursor: pointer;">Cerrar Sesion</a>
       </div>
