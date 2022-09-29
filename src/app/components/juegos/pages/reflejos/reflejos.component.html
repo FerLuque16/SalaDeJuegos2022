@@ -1,0 +1,58 @@
+<div class="body text-center vh-100 flex-column" [ngStyle]="{'background-color': cambiarBg ? 'green' : '#23252C'}">
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <strong>
+            <h1 class="text-center">Juego de Reflejos</h1>
+            </strong>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <h2>Prueba tu tiempo de respuesta</h2>
+        </div>
+        <div class="row d-flex justify-content-center flex-column align-items-center">
+            <h3>Como jugar</h3>
+            <p>Presiona en "Iniciar" y espera a que el fondo cambie.
+                Cuando cambie de color, presiona en "Detener" para ver tu tiempo de respuesta
+            </p>
+        <div>
+        <!-- <div class="row">
+            <button class="btn btn-primary btn-sm  me-auto" (click)="startit()">Iniciar</button>
+            <button class="btn btn-success btn-sm" (click)="stopTest()">Detener</button>
+        </div> -->
+        <div class="row">
+
+            <div class="d-grid gap-2 col-3 mx-auto">
+                <button class="btn btn-primary " (click)="startit()">Iniciar</button>
+                <button class="btn btn-success" (click)="stopTest()">Detener</button>
+              </div>
+
+            
+        </div>
+        
+    </div>
+
+    <!-- Modal -->
+
+  <div class="modal" [ngClass]="displayModal ? 'mostrar' : 'oculto'" >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{modalMsj1}}</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;tu mama</span>
+          </button> -->
+        </div>
+        <div class="modal-body">
+          <p>{{modalMsj2}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="terminarJuego()" >Cerrar y volver al menu</button>
+          <button type="button" class="btn btn-primary" (click)="reiniciar()">Seguir jugando</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+</div>
+<a class="btn btn-danger mt-2" routerLink="/juegos">Volver</a>
+

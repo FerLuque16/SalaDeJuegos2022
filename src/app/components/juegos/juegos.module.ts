@@ -6,6 +6,8 @@ import { JuegosComponent } from './pages/juegos.component';
 import { AhorcadoComponent } from './pages/ahorcado/ahorcado.component';
 import { MayormenorComponent } from './pages/mayormenor/mayormenor.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { PreguntadosComponent } from './pages/preguntados/preguntados.component';
+import { ReflejosComponent } from './pages/reflejos/reflejos.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { MenuComponent } from './pages/menu/menu.component';
     JuegosComponent,
     AhorcadoComponent,
     MayormenorComponent,
-    MenuComponent
+    MenuComponent,
+    PreguntadosComponent,
+    ReflejosComponent
   ],
   imports: [
     CommonModule,

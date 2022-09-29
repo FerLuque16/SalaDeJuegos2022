@@ -1,0 +1,22 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #23252C;
+    color: white ;
+}
+.modal{
+    color: black;
+}
+.respuesta{
+    cursor: pointer;
+}
+.respuesta:hover{
+    background-color: #7cb9fa;
+}
+.mostrar{
+    display: block;
+}
+.oculto{
+    display: none;
+}

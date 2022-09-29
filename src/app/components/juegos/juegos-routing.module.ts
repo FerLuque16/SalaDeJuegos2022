@@ -5,6 +5,8 @@ import { AhorcadoComponent } from './pages/ahorcado/ahorcado.component';
 import { JuegosComponent } from './pages/juegos.component';
 import { MayormenorComponent } from './pages/mayormenor/mayormenor.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { PreguntadosComponent } from './pages/preguntados/preguntados.component';
+import { ReflejosComponent } from './pages/reflejos/reflejos.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,16 @@ const routes: Routes = [
       {
         path:'mayormenor',
         component:MayormenorComponent,
+        canActivate:[UsuarioLogueadoGuard]
+      },
+      {
+        path:'preguntados',
+        component:PreguntadosComponent,
+        canActivate:[UsuarioLogueadoGuard]
+      },
+      {
+        path:'reflejos',
+        component:ReflejosComponent,
         canActivate:[UsuarioLogueadoGuard]
       },
       {
