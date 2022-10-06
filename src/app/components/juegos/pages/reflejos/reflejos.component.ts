@@ -65,15 +65,12 @@ export class ReflejosComponent implements OnInit {
     }
     else
     {
-        if (!this.iniciarPresionado)
-        {
-            // alert("Presione iniciar primero");
+        if (!this.iniciarPresionado){
+            return;
         }
-        else
-        {       
+        else{       
             clearTimeout(this.timerID);
             this.iniciarPresionado=false;             
-            // alert("Presionaste antes!");
         }               
     }
   }

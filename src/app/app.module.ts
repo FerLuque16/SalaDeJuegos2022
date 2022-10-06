@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { HttpClientModule } from '@angular/common/http';
+import { EncuestaComponent } from './components/encuesta/encuesta.component';
+
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     ErrorComponent,
     QuienSoyComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    EncuestaComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     ToastrModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
     
     // provideAuth(() => getAuth()),
     // provideFirestore(() => getFirestore())

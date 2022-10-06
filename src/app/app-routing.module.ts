@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/pages/login/login.component';
 import { RegistroComponent } from './auth/pages/registro/registro.component';
 import { ChatModule } from './chat/chat.module';
+import { EncuestaComponent } from './components/encuesta/encuesta.component';
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
 import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
+import { UsuarioLogueadoGuard } from './guards/usuario-logueado.guard';
 
 const routes: Routes = [
   {
@@ -40,6 +42,11 @@ const routes: Routes = [
   {
     path:'errorUsuario',
     component:ErrorComponent
+  },
+  {
+    path:'encuesta',
+    component:EncuestaComponent,
+    canActivate:[UsuarioLogueadoGuard]
   },
   {
     path:'**',

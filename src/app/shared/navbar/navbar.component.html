@@ -11,7 +11,9 @@
         <a class="nav-link" routerLink="quiensoy">Quien Soy</a>
         <a class="nav-link" routerLink="/juegos">Menu de Juegos</a>
         <a *ngIf="usuarioLogueado" class="nav-link" routerLink="/chat">Chat</a>
+        <a *ngIf="usuarioLogueado" class="nav-link" routerLink="/encuesta">Encuesta</a>                           
         <a *ngIf="usuarioLogueado" class="nav-link" (click)="cerrarSesion()" style="cursor: pointer;">Cerrar Sesion</a>
       </div>
     </div>
 </nav>
+                    
