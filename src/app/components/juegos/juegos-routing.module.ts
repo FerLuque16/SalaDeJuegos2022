@@ -7,6 +7,7 @@ import { MayormenorComponent } from './pages/mayormenor/mayormenor.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { PreguntadosComponent } from './pages/preguntados/preguntados.component';
 import { ReflejosComponent } from './pages/reflejos/reflejos.component';
+import { ResultadosComponent } from './pages/resultados/resultados.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,11 @@ const routes: Routes = [
       {
         path:'reflejos',
         component:ReflejosComponent,
+        canActivate:[UsuarioLogueadoGuard]
+      },
+      {
+        path:'resultados',
+        component:ResultadosComponent,
         canActivate:[UsuarioLogueadoGuard]
       },
       {

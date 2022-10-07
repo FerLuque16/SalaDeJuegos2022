@@ -8,6 +8,7 @@ import { MayormenorComponent } from './pages/mayormenor/mayormenor.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { PreguntadosComponent } from './pages/preguntados/preguntados.component';
 import { ReflejosComponent } from './pages/reflejos/reflejos.component';
+import { ResultadosComponent } from './pages/resultados/resultados.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ReflejosComponent } from './pages/reflejos/reflejos.component';
     MayormenorComponent,
     MenuComponent,
     PreguntadosComponent,
-    ReflejosComponent
+    ReflejosComponent,
+    ResultadosComponent
   ],
   imports: [
     CommonModule,
